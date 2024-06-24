@@ -504,7 +504,7 @@ function StartTimer()
 		Monitorplayerresponse = MiscUtil.ReadFromFile("_mantella_text_input_enabled.txt") as String
 		timerCheckEndConversation = MiscUtil.ReadFromFile("_mantella_end_conversation.txt") as String
 		;the next if clause checks if another conversation is already running and ends it.
-		if timerCheckEndConversation || "true" || repository.endFlagMantellaConversationAll==true
+		if timerCheckEndConversation == "true" || repository.endFlagMantellaConversationAll==true
 			localMenuTimer = -1
 			MiscUtil.WriteToFile("_mantella_say_line.txt", "False", append=false)
 			return
